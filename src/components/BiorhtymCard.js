@@ -1,10 +1,16 @@
 import { IonCard, IonCardContent, IonCardHeader, IonCardTitle } from "@ionic/react";
+import dayjs from "dayjs";
 
-export default function BiorhthymCard() {
+function formatDate(isoString) {
+    const day = dayjs(isoString);
+    return day.format('D MMMM YYYY');
+}
+
+export default function BiorhthymCard({ targetDate }) {
     return (
-        <IonCard>
+        <IonCard className="ion-text-center">
             <IonCardHeader>
-                <IonCardTitle>Results</IonCardTitle>
+                <IonCardTitle>{formatDate(targetDate)}</IonCardTitle>
             </IonCardHeader>
             <IonCardContent>
                 <p>Physical</p>
