@@ -9,7 +9,7 @@ import {
   IonTitle, 
   IonToolbar } from '@ionic/react';
 import { useState } from 'react'
-import BiorhthymCard from './components/BiorhtymCard';
+import BiorhythmCard from './components/BiorhythmCard';
 
 function getToday() {
   return new Date().toISOString().slice(0, 'yyyy-mm-dd'.length)
@@ -40,7 +40,7 @@ const [targetDate, setTargetDate] = useState(getToday);
             />
           </IonItem>
         </IonList>
-        <BiorhthymCard />
+        <BiorhythmCard />
       </IonContent>
     </IonApp>
   );
