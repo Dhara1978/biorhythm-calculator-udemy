@@ -40,7 +40,9 @@ const [targetDate, setTargetDate] = useState(getToday);
             />
           </IonItem>
         </IonList>
-        <BiorhythmCard />
+        {Boolean(birthDate) && (
+          <BiorhythmCard birthDate={birthDate} targetDate={targetDate} />
+        )}
       </IonContent>
     </IonApp>
   );
