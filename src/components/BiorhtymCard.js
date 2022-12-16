@@ -6,7 +6,7 @@ function formatDate(isoString) {
     return day.format('D MMMM YYYY');
 }
 
-export default function BiorhthymCard({ targetDate }) {
+export default function BiorhythmCard({ targetDate }) {
     return (
         <IonCard className="ion-text-center">
             <IonCardHeader>
